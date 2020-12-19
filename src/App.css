@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+:root {
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+
+body {
+  background-color: #f7f7f7;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  background: #333;
+  color: white;
+  padding: 10px;
+  font-size: 150%;
+  text-align: center;
+}
+
+/*className container in app.js. Style for each container component*/
+.container {
+  margin: 30px auto;
+  width: 50%;
+}
+
+h1 {
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+h3 {
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 10px;
+  margin: 40px 0 10px;
+}
+
+h4 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/*Box for IncomeAndExpenses Component*/
+.income-expenses-container {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+/*Alignment for IncomeAndExpenses Component*/
+.income-expenses-container > div {
+  flex: 1;
+}
+
+/*Formats the style of the money amounts*/
+.money {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 5px 0;
+}
+
+.money.add {
+  color: green;
+}
+
+.money.sub {
+  color: red;
+}
+
+label {
+  display: inline-block;
+  margin: 10px 0;
+}
+
+/*Input types in AddTransaction.js*/
+input[type='text'],
+input[type='number'] {
+  border: 1px solid white;
+  border-radius: 2px;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: #333;
+  box-shadow: var(--box-shadow);
+  color: white;
+  border: 0;
+  display: block;
+  font-size: 16px;
+  margin: 10px 0 30px;
+  padding: 10px;
+  width: 100%;
+}
+
+.btn:focus,
+.delete-btn:focus {
+  outline: 0;
+}
+
+/*List in Transactions.js*/
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+/*Puts list items in transactions in boxes*/
+.list li {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/*puts red border next to each list item in transactions with classname add*/
+.list li.add {
+  border-right: 5px solid lightgreen;
+}
+
+/*puts red border next to each list item in transactions with classname sub*/
+.list li.sub {
+  border-right: 5px solid red;
+}
+
+.delete-btn {
+  background-color: red;
+  border: 0;
+  color: white;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}

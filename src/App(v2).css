@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+:root {
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+body {
+  width: auto;
+  margin: auto;
+  padding: auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  background: #333;
+  color: #fff;
+  padding: 5px 5px 5px 30px;
+}
+
+.header h2
+{
+  font-size: 200%;
+}
+
+.balance {
+  font-size: 120%;
+  margin: auto;
+  padding: 0em .5em 0em 1.5em;
+  width: auto;
+}
+
+/*Box for IncomeAndExpenses Component*/
+.income-expenses-container {
+  float: left;
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  border: solid black;
+  display: flex;
+  padding: .5em 1em 1.5em 1em;
+  margin: 1em 5em 1em 5em;
+  width: 40%;
+}
+
+/*Alignment for IncomeAndExpenses Component*/
+.income-expenses-container > div {
+  flex: auto;
+  text-align: center;
+}
+
+/*Puts a line between Income And Expenses in the box. first-of-type puts the line to the right of the first child of div which in this case is income
+.income-expenses-container > div:first-of-type {
+  border-right: 1px solid #dedede;
+}*/
+
+.addTransaction {
+  float: left;
+  width: auto;
+  margin: 1em, 0, 1em, 0;
+  padding: .5em 3em 1em 2em;
+}
+
+.transactionRecords {
+  float: right;
+  width: 50%;
+  margin: 1em 1em 1em 2em;
+  padding: auto;
+}
+
+/*Formats the style of the money amounts*/
+.money {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 5px 0;
+}
+
+/*Green if income*/
+.money.add {
+  color: #2ecc71;
+}
+
+/*Red if expense*/
+.money.sub {
+  color: #c0392b;
+}
+
+/*Input types in AddTransaction.js*/
+input[type='text'],
+input[type='number'] {
+  border: 1px solid #dedede;
+  border-radius: 2px;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  width: 50%;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: #9c88ff;
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 0;
+  display: block;
+  font-size: 16px;
+  margin: 10px 0 30px;
+  padding: 10px;
+  width: 100%;
+}
+
+.btn:focus,
+.delete-btn:focus {
+  outline: 0;
+}
+
+/*List in TransactionRecords.js*/
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+/*Puts list items in transactions in boxes*/
+.list li {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/*puts red border next to each list item in transactions with classname add*/
+.list li.add {
+  border-right: 5px solid #2ecc71;
+}
+
+/*puts red border next to each list item in transactions with classname sub*/
+.list li.sub {
+  border-right: 5px solid #c0392b;
+}
+
+.delete-btn {
+  cursor: pointer;
+  background-color: #e74c3c;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.list li:hover .delete-btn {
+  opacity: 1;
+}
