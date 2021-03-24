@@ -2,6 +2,8 @@
 
 This is an expenses tracker web application that I built as part of the final project for my Web Application Design and Development class. The application shows a current total budget, the total incomes and expenses, a list of transactions as well as a component for adding new transactions as an income or expense. The transactions are stored in the browser local storage.
 
+![alt text](/ExpensesTracker.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
