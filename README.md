@@ -1,4 +1,4 @@
-## Expenses Tracker web application using React.js framework
+# Expenses Tracker web application using React.js framework
 
 This is an expenses tracker web application that I built as part of the final project for my Web Application Design and Development class. The application shows a current total budget, the total incomes and expenses, a list of transactions as well as a component for adding new transactions as an income or expense. The transactions are stored in the browser local storage.
 
