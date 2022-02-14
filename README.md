@@ -4,6 +4,9 @@ This is an expenses tracker web application that I built as part of the final pr
 
 ![alt text](/ExpensesTracker.png)
 
+Demo: 
+![alt text](/expensestracker.gif)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
